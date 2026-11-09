@@ -370,7 +370,8 @@ function card(s){
   return `
   <div class="song-card glass2 rounded-3xl overflow-hidden cursor-pointer btn" data-id="${s.id}">
     <div class="relative">
-      <img src="${esc(s.cover)}" class="w-full aspect-square object-cover" alt="${esc(s.title)}">
+    <img src="${esc(s.cover)}" loading="lazy" decoding="async"
+     class="w-full aspect-square object-cover" alt="${esc(s.title)}">
       <div class="absolute inset-0 overlay opacity-0 hover:opacity-100 transition flex items-end p-4">
         <button class="playOne rounded-full w-12 h-12 text-white font-black" style="background:linear-gradient(90deg,var(--accent),#22c55e)" data-id="${s.id}" aria-label="Play ${esc(s.title)}">▶</button>
       </div>
